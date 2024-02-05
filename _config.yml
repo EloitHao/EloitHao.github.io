@@ -1,9 +1,9 @@
 # Site settings
-title: Website Title
-description: Website short description
-baseurl: "" 
+title: 大道伍拾
+description: 天行肆玖,遁去其壹
+baseurl: ""
 #change the baseurl to "" if you are using it as your user GitHub Pages
-url: "https://EloitHao.github.io"  
+url: "https://eloithao.github.io"
 
 
 # GitHub User settings
@@ -11,23 +11,23 @@ username: Username
 github_username: github_username
 user_description: user_description
 user_title: user_title
-email: 
+email:
 
 # Blog Author settings
 author:
-  name:            
-  picture:        
-  email:           
-  description:     
+  name: eloit
+  picture:
+  email: haoxinemail@gmail.com
+  description:
   twitter:
   facebook:
-  github:          
+  github: https://eloithao.github.io
   linkedin:
 
 
 # markdown
 markdown: kramdown
-  
+
 kramdown:
  footnote_nr: 1
  entity_output: as_char
@@ -41,13 +41,13 @@ kramdown:
  block:
   line_numbers: true
   start_line: 1
- 
+
 highlighter: rouge
-    
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  
+
 permalink: none
 
 defaults:
