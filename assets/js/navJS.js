@@ -38,9 +38,10 @@ window.onscroll = function () {
 };
 
 // 手机端：点击侧栏/按钮以外的区域时自动收起侧栏
+// 注意：点击 label 会向 checkbox 转发一次 click，需要放行，否则侧栏会被立即误关
 document.addEventListener('click', function (e) {
     var checkbox = document.getElementById('sidebar-checkbox');
     if (!checkbox || !checkbox.checked) return;
-    if (e.target.closest('.sidebar') || e.target.closest('.sidebar-toggle')) return;
+    if (e.target.closest('.sidebar') || e.target.closest('.sidebar-toggle') || e.target.closest('.sidebar-checkbox')) return;
     checkbox.checked = false;
 });
