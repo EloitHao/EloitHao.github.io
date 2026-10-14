@@ -8,27 +8,26 @@ Edit: 2024-02-05
 
 # 为什么我的评论没有显示在页面上？
 
-Well, this website means *a lot* to me. I don't want to get into any trouble because anyone else's comments. **So all comments will be moderated**. It might take a few days before your comments finally show up on the website. Still, I reserve the right to edit or delete comments that do not meet the standards. See how the [comm(enit\|it) system](https://commentit.io/) works [here](https://commentit.io/faq).
+这个网站对我来说*很重要。我不想因为别人的评论而惹上任何麻烦。**因此，所有评论都将经过审核**。您的评论可能需要几天时间才能最终显示在网站上。不过，我保留编辑或删除不符合标准的评论的权利。查看 [comm(enit\|it) 系统](https://commentit.io/) 的工作方式请点击[这里](https://commentit.io/faq)。
 
-# Do you read the comments?
+# 你会阅读评论吗？
 
-**Yes**. All comments on any of the post, no matter how long ago it was posted, will be visiable to me the second you posted it. 
+**会的**。无论发表时间多久，任何文章下的所有评论，在你发表的那一刻我都能看到。
 
-I read your comments because your comments matter to me.
+我会阅读你的评论，因为你的评论对我很重要。
 
-I get encouragement from comments ( this is the main reason I opened the comment section).
+我从评论中获得了鼓励（这是我开通评论区的主要原因）。
 
-Besides, I am aware that I will be probably making *a lot* mistakes on posts. Some maybe grammatic, some might be of facts. Enabling comment is the most effective way for me to correct them. 
+此外，我知道我可能会在文章中犯*很多*错误。有些可能是语法错误，有些可能是事实错误。开放评论是我纠正这些错误最有效的方式。
 
-# What are the guidelines of posting a comment?
+# 发表评论有什么准则？
 
-Well, there really isn't much. **You can be a resource for your fellow readers and I sincerely hope that you’ll use our comment section to do that**. Just follow your common sense and you should be good. For those who really need a document, here are the rules.
+其实并没有太多要求。**你可以为其他读者提供帮助，我真诚地希望你能利用评论区做到这一点**。只要遵循常识，就不会有问题。对于确实需要一份文档的人，以下是规则：
 
-1. **Stay on point.** When making a comment, try not to go off-topic. Also try to keep them short and clear.
+1. **紧扣主题。** 发表评论时，尽量不要跑题。同时，尽量保持评论简短清晰。
 
-2. **Show respect.** I encourage and appreciate thoughtful debate. Just make sure that when you disagree with the author or another commenter, you do so in a respectful and courteous manner.
+2. **保持尊重。** 我鼓励并欣赏有深度的讨论。只是在不同意作者或其他评论者观点时，请以尊重和礼貌的方式表达。
 
-# Disclaimer
+# 免责声明
 
-Users of website participate at their own risk, and take personal responsibility for their comments, username, and any information provided. The blog owner accepts no responsibility or liability for any data, text, images, messages, or any other materials whatsoever (“Content”) in any comments on this Blog. The opinions expressed in the comments are the responsibility of the commenter.
-
+本网站的用户需自担风险，并对自己的评论、用户名及提供的任何信息承担个人责任。对于本博客任何评论中的任何数据、文本、图像、消息或其他任何材料（“内容”），博主不承担任何责任或义务。评论中表达的观点由评论者自行负责。

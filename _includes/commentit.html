@@ -1,4 +1,4 @@
-<h2> Comments </h2>
+<h2> 评论 </h2>
    <hr>
 {% if page.commentable == true %}
 	{% if page.comments %}
@@ -11,25 +11,25 @@
 			</div>
 			<div class="media-body">
 				<p class="text-muted">
-				 <a href="{{ c.author.url }}">{{ c.author.displayName }}</a> {% if c.author.displayName == site.github_username %}<code>owner</code> {% endif %} at {{ c.date | date: "%e %b, %Y %k:%M" }}
+				 <a href="{{ c.author.url }}">{{ c.author.displayName }}</a> {% if c.author.displayName == site.github_username %}<code>博主</code> {% endif %} 于 {{ c.date | date: "%Y年%m月%d日 %k:%M" }}
 				</p>
 				<p>{{ c.content | newline_to_br | markdownify }}</p>
 			</div>
 		</div>
 	{% else %}
 		{% if page.protected == true %}
-			<h6 style="color:#34495e;margin-bottom: auto;" >&#128517; Comments on this page are now protected.</h6>
+			<h6 style="color:#34495e;margin-bottom: auto;" >&#128517; 此页面的评论现已被保护。</h6>
 		{% else %}
-			<h6 style="color:#34495e;margin-bottom: auto;"> Be the first one to comment on this page!</h6>
+			<h6 style="color:#34495e;margin-bottom: auto;"> 快来抢沙发，成为第一个评论的人吧！</h6>
 		{% endif %}
 	{% endfor %}
 {% else %}
-		<h6 style="color:#34495e;margin-bottom: auto;">&#128517; Commenting is disabled on this post.</h6>
+		<h6 style="color:#34495e;margin-bottom: auto;">&#128517; 本文已禁用评论。</h6>
 {% endif %}
 
 {% if page.protected == false %}
-    <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
-		<div style="font-size: smaller;">You can use <a href="{{site.url}}{{site.baseurl}}/info/markdown-syntax">extended GitHub flavored markdown</a> in your comment. <a href="{{site.url}}{{site.baseurl}}/info/commenting-guidelines">Commenting FAQs & Guidelines </a></div> 
+    <noscript>请启用 JavaScript 以查看由 <a href="https://commentit.io/">Comm(ent|it)</a> 提供的评论表单</noscript>
+		<div style="font-size: smaller;">评论中可以使用<a href="{{site.url}}{{site.baseurl}}/info/markdown-syntax">扩展的 GitHub flavored Markdown</a> 语法。<a href="{{site.url}}{{site.baseurl}}/info/commenting-guidelines">评论常见问题与指南 </a></div> 
     <div id="commentit"></div>
 		
 

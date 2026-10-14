@@ -1,181 +1,181 @@
 ---
-title: Sample Post - Markdown Syntax
+title: 示例文章 - Markdown 语法
 commentable: flase
 Edit: 2018-11-14
 mathjax: true
 mermaid: true
-tags: tag1 tag2 tag3
-categories: sample post
-description: This is a sample post testing and demonstrating all the markdown syntaxes. In the description you can also use markdowns to do *A* **B** ***C*** and `D` and other stuff like a [link](https://EloitHao.github.io).
+tags: 标签1 标签2 标签3
+categories: 示例文章
+description: 这是一篇测试并演示所有 markdown 语法的示例文章。在描述中你同样可以使用 markdown 来实现 *A* **B** ***C*** 和 `D`，以及其他诸如[链接](https://EloitHao.github.io)之类的东西。
 ---
 
-This page's comment is disabled, scroll down to see.
+本页面已禁用评论，请滚动到页面底部查看。
 
-# Careful!
+# 注意！
 
-Don't use `[]` in YAML front matter. 
+不要在 YAML front matter 中使用 `[]`。
 
-Use `\newline` instead of `\\` in inline math. 
+行内公式中请用 `\newline` 代替 `\\`。
 
-`\substack` is a very useful command.
+`\substack` 是一个非常有用的命令。
 
-`<img src="" width=80%>` will be rendered by typora but Jekyll only renders `<img src="" width="80%">`
+`<img src="" width=80%>` 能被 typora 渲染，但 Jekyll 只渲染 `<img src="" width="80%">`
 
-Display math must have extra black lines above and below like this.
+展示公式（display math）的上下必须留有空行，像这样。
 
 ```markdown
-some normal text
+一些普通文本
 
 $$
 E=mc^2
 $$
 
-Some more text
+另一些文本
 ```
 
 {% raw %}
 
-do not use `{{` anywhere in your math. use `{ {` instead. Jekyll will parse that as liquid tags
+不要在公式中的任何位置使用 `{{`，请改用 `{ {`。Jekyll 会将其解析为 liquid 标签
 
-do not use `x_1` in inline math, write that as `x _ 1`. Jekyll will parse that as italic.
+行内公式中不要使用 `x_1`，请写成 `x _ 1`。Jekyll 会将其解析为斜体。
 
 {% endraw %}
 
-# Highlights
+# 强调
 
-*This is italic.* **This is Bold**. * If asterisk is surrounded by spaces, it is not parsed. *
+*这是斜体。* **这是粗体**。 * 如果星号两侧被空格包围，则不会被解析。 *
 
-_This is also italic._ __This is also Bold__. _ If underscore is surrounded by spaces, it is not parsed. _
+_这也是斜体。_ __这也是粗体__。 _ 如果下划线两侧被空格包围，则不会被解析。 _
 
-~~This is strike through~~. 
+~~这是删除线~~。
 
-There is no underline in markdown. You can use html tags <u>like this to underline.</u>
+markdown 中没有下划线语法。你可以使用 html 标签<u>像这样加下划线</u>。
 
-`This is a code block`. 
+`这是一个代码块`。
 
-[This is an external link](https://bit.ly). "https://" is important. This is an internal [link](#this-is-a-h2). Internal links are all lowercase with space replaced by hyphens "-". 
+[这是一个外部链接](https://bit.ly)。`"https://"` 很重要。这是一个内部[链接](#这是-h2)。内部链接全部小写，空格用连字符 "-" 替换。
 
-You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[this](https://bit.ly)**, but not like `[this](https://bit.ly)`.
+你可以混合使用，比如 [*这样*](https://bit.ly)、[`这样`](https://bit.ly)、**[这样](https://bit.ly)**，但不能像 `[这样](https://bit.ly)` 这样。
 
-# Blocks
+# 块级元素
 
-> This is a quote block
+> 这是一个引用块
 >
-> > This is a quote block in side another
+> > 这是嵌套在另一个引用块中的引用块
 
 ```python
  import numpy as np
- print("""This is a python code fence""")
+ print("""这是一个 Python 代码块""")
 ```
 
 ```fortran
- "This is a fortran code fence"
+ "这是一个 Fortran 代码块"
  implicit none
 ```
 
 ```
- This is a simple code fence. You can use it to display text. The fonts are mono spaced.
+ 这是一个简单代码块。你可以用它来显示文本，字体是等宽的。
 ```
 
-You can mix them as well, like 
+你也可以混合使用，比如
 
 > ```
->  This
+>  这样
 > ```
 
-# Other Elements
+# 其他元素
 
-This is horizontal line
+这是一条水平分割线
 
 ------
 
-# Math Blocks
+# 数学公式
 
-This is inline math $\sum_{i=1}^{N} i $. This is display math.
+这是行内公式 $\sum_{i=1}^{N} i $。这是展示公式。
 $$
 \sum_{i=1}^{N} i 
 $$
-The extra empty line matters, or you will end up with
+额外的空行很重要，否则你会得到
 $$
 \sum_{i=1}^{N} i
 $$
-[Mathjax](http://docs.mathjax.org/en/latest/tex.html) syntax is like latex. You cannot use `\usepackge`, but you can use `\newcommand` like this 
+[Mathjax](http://docs.mathjax.org/en/latest/tex.html) 的语法类似 latex。你不能使用 `\usepackge`，但可以像这样使用 `\newcommand`
 $$
 \newcommand{\NewOp}[2]{\lbrace{#1}\mid \otimes{#2}\rbrace}
 $$
-And `\NewOp` will be available in all later math blocks, whether inline $\NewOp{x}{y}$ or display
+然后 `\NewOp` 在之后的所有公式块中都可用，无论是行内公式 $\NewOp{x}{y}$ 还是展示公式
 $$
 \NewOp{x}{y}
 $$
-Be **very careful** with the vertical bar symbol and underscore in math. If you use it like $|x|\ge 0$, $|0|=0$, or like $\lbrace x | x\gt 0\rbrace$, you will get a bunch of gibberish.
+在公式中使用竖线符号和下划线时要**非常小心**。如果你写成 $|x|\ge 0$、$|0|=0$，或者 $\lbrace x | x\gt 0\rbrace$ 这样，你会得到一堆乱码。
 
-Use `\vert` in $\vert x\vert\ge 0$, $\vert 0\vert=0$. Use `\mid` in $\lbrace x \mid x\gt 0$ instead.
+请改用 `\vert`，如 $\vert x\vert\ge 0$、$\vert 0\vert=0$；用 `\mid`，如 $\lbrace x \mid x\gt 0$。
 
-Also using underscores like this $x_1$, $x_2$, $x_{c_2}^{c_3}$, with $y_{c_2}^{c_3}$, will be processed as _this_.
+同样，像这样使用下划线 $x_1$、$x_2$、$x_{c_2}^{c_3}$ 和 $y_{c_2}^{c_3}$，会被处理成_这样_。
 
-Wrap underscores with whitespaces like this $x _ 1$, $x _ 2$, $x _ {c _ 2}^{c _ 3}$, with $y _ {c _ 2}^{c _ 3 }$.
+给下划线两侧包上空格，像这样 $x _ 1$、$x _ 2$、$x _ {c _ 2}^{c _ 3}$ 和 $y _ {c _ 2}^{c _ 3 }$。
 
-# Images
+# 图片
 
-Markdown uses `![caption](link)` to reference pictures, caption is optional. You cannot control the size. 
+Markdown 使用 `![caption](link)` 来引用图片，题注是可选的。你无法控制图片大小。
 
 ![caption](https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
 
-So I prefer using HTML tags like this:
+所以我更喜欢像这样使用 HTML 标签：
 
 <img src="https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
 
-# Lists
+# 列表
 
-- This is unordered list
-  - sub item
-    - subsub item
-      - subsubsub item
-        - subsubsubsub ...
-
-------
-
-- List can have multiple lines
-
-  like this.
+- 这是无序列表
+  - 子项
+    - 子子项
+      - 子子子项
+        - 子子子子项 ……
 
 ------
 
-1. This ordered list
-   1. sub item
-2. This is as well
-3. It can keep going
+- 列表可以有多行
+
+  就像这样。
 
 ------
 
-1. You can avoid numbers like this
-   1. sub item
-1. It keeps going
-1. Blah Blah
+1. 这是有序列表
+   1. 子项
+2. 这个也是
+3. 可以一直延续
+
+------
+
+1. 你可以像这样省略编号
+   1. 子项
+1. 它会自动延续
+1. 等等等等
 
 
-# mermaid
+# mermaid 图表
 
 ```mermaid
 
 sequenceDiagram
-    Alice ->> Bob: Hello Bob, how are you?
-    Bob-->>John: How about you John?
-    Bob--x Alice: I am good thanks!
-    Bob-x John: I am good thanks!
-    Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+    Alice ->> Bob: 你好 Bob，最近怎么样？
+    Bob-->>John: 你呢，John？
+    Bob--x Alice: 我很好，谢谢！
+    Bob-x John: 我很好，谢谢！
+    Note right of John: Bob 想了很久很久，<br/>久到这段文字<br/>都放不<br/>下一行了。
 
-    Bob-->Alice: Checking with John...
-    Alice->John: Yes... John, how are you?
+    Bob-->Alice: 正在和 John 确认……
+    Alice->John: 嗯……John，你好吗？
 
 ```
 
 ```mermaid
 
 graph LR
-    A[Square Rect] -- Link text --> B((Circle))
-    A --> C(Round Rect)
-    B --> D{Rhombus}
+    A[方形] -- 连接文字 --> B((圆形))
+    A --> C(圆角矩形)
+    B --> D{菱形}
     C --> D
 
 ```
@@ -183,21 +183,21 @@ graph LR
 ```mermaid
 
 graph TB
-    sq[Square shape] --> ci((Circle shape))
+    sq[方形] --> ci((圆形))
 
-    subgraph A subgraph
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+    subgraph 一个子图
+        od>奇形]-- 两行<br/>边注释 --> ro
+        di{带<br/>换行的菱形} -.-> ro(圆角<br>方形<br>形状)
+        di==>ro2(圆角方形)
     end
 
-    %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    %% 注意，这里没有在形状中添加文字，而是追加在更下面
+    e --> od3>奇形中带换行符的<br>超长文本]
 
-    %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز)
+    %% 双百分号后面是注释
+    e((内圆<br>和一些奇怪的<br>特殊字符)) --> f(,.?!+-*ز)
 
-    cyr[Cyrillic]-->cyr2((Circle shape Начало));
+    cyr[西里尔文]-->cyr2((圆形 Начало));
 
      classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -209,67 +209,67 @@ graph TB
 
 ```mermaid
 sequenceDiagram
-    loop Daily query
-        Alice->>Bob: Hello Bob, how are you?
-        alt is sick
-            Bob->>Alice: Not so good :(
-        else is well
-            Bob->>Alice: Feeling fresh like a daisy
+    loop 每日问候
+        Alice->>Bob: 你好 Bob，最近怎么样？
+        alt 生病了
+            Bob->>Alice: 不太好 :(
+        else 身体好
+            Bob->>Alice: 精神抖擞像朵小雏菊
         end
 
-        opt Extra response
-            Bob->>Alice: Thanks for asking
+        opt 额外回应
+            Bob->>Alice: 多谢关心
         end
     end
 ```
 
 
-# Tables
+# 表格
 
-| This column is left aligned | This column is centered | This column is right aligned |
+| 此列左对齐 | 此列居中对齐 | 此列右对齐 |
 | :-------------------------- | :---------------------: | ---------------------------: |
 | 1                           |            4            |                            7 |
 | 2                           |            5            |                            8 |
 | 3                           |            6            |                            9 |
 
-| You can use `![caption](link)` in tables.                    | You can use Math in tables. | You can use `<img src="" width="">` in tables.               |
+| 表格中可以使用 `![caption](link)`。                    | 表格中可以使用数学公式。 | 表格中可以使用 `<img src="" width="">`。               |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
 | ![caption](https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
 
-# Foot Notes
+# 脚注
 
-This is a note[^1]. Footnotes can have captions like[^this]. You can reference to the same note multiple times like[^this]. Foot notes can have many other options like[^this-one]. Or just like [^that]. This is a [reference style link][linkid] to a page. And [this][linkid] is also a link. As is [this][] and [that].
+这是一个脚注[^1]。脚注可以带题注，比如[^this]。同一个脚注可以被多次引用，比如[^this]。脚注还有很多其他用法，比如[^this-one]。或者就像[^that]这样。这是一个指向某页面的[引用式链接][linkid]。[这个][linkid]也是一个链接。[这个][]和[那个]也是。
 
-# Titles
+# 标题
 
-# This is  h1
+# 这是 h1
 
-## This is  h2
+## 这是 h2
 
-### This is  h3
+### 这是 h3
 
-#### This is  h4
+#### 这是 h4
 
-##### This is h5
+##### 这是 h5
 
-###### This is h6
+###### 这是 h6
 
-# Foot Notes
+# 脚注
 
-The Foot notes are like this
+脚注就像这样
 
 [^1]: https://EloitHao.github.io
 [^this]: https://EloitHao.github.io
 [^this-one]: 
 
 ```
-> Blockquotes can be in a footnote.
+> 脚注中可以使用引用块。
 ```
 
 ```
-    as well as code blocks
+    也可以使用代码块
 ```
 
-[^that]: or, naturally, simple paragraphs.
+[^that]: 或者，自然而然地，简单的段落。
 
-[linkid]: https://EloitHao.github.io	"Optional Title"
+[linkid]: https://EloitHao.github.io	"可选标题"

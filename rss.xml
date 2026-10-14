@@ -5,7 +5,7 @@ layout: null
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>{{site.title}}</title>
- <description>This is RSS feed for my website</description>
+ <description>这是本网站的 RSS 订阅源</description>
  <link href="{{site.url}}"/>
  <lastBuildDate>{{site.time | date_to_xmlschema }}</lastBuildDate>
  <pubDate>{{site.time | date_to_xmlschema }}</pubDate>

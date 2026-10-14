@@ -1,9 +1,9 @@
 <!-- Html Elements for Search -->
 <div id="search-container">
-   <input type="text" id="search-input" style="width: 100%;" placeholder="type in to search...">
+   <input type="text" id="search-input" style="width: 100%;" placeholder="输入关键词进行搜索...">
    <ul id="results-container"></ul>
 </div>
-Enable Full-content search: <input type="checkbox" id="Full-content"  onclick="CheckBox()">
+启用全文搜索：<input type="checkbox" id="Full-content"  onclick="CheckBox()">
 <!-- Enable Fuzzy search: <input type="checkbox" id="fuzzy"  onclick="CheckBox()"> 
    fuzzy search is awful
    -->
@@ -14,7 +14,7 @@ Enable Full-content search: <input type="checkbox" id="Full-content"  onclick="C
        searchInput: document.getElementById('search-input'),
        resultsContainer: document.getElementById('results-container'),
        json: '{{site.url}}{{site.baseurl}}/blog/searchFull.json',
-       noResultsText: 'No results found',
+       noResultsText: '未找到相关结果',
        limit: 15,
        fuzzy: false
    }) 
@@ -26,7 +26,7 @@ Enable Full-content search: <input type="checkbox" id="Full-content"  onclick="C
                searchInput: document.getElementById('search-input'),
                resultsContainer: document.getElementById('results-container'),
                json: '{{site.url}}{{site.baseurl}}/blog/searchFull.json',
-   			noResultsText: 'No results found',
+   			noResultsText: '未找到相关结果',
                limit: 15,
                fuzzy: false
            }) 
@@ -35,7 +35,7 @@ Enable Full-content search: <input type="checkbox" id="Full-content"  onclick="C
                searchInput: document.getElementById('search-input'),
                resultsContainer: document.getElementById('results-container'),
                json: '{{site.url}}{{site.baseurl}}/blog/search.json',
-      noResultsText: 'No results found',
+      noResultsText: '未找到相关结果',
                limit: 15,
                fuzzy: false
            }) 

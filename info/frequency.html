@@ -1,6 +1,6 @@
 ---
 layout: displayindex
-title: Calendar
+title: 日历
 ---
 
 {% comment %} 
@@ -96,29 +96,29 @@ generate empty calendar
          {% assign monday_day_sn = week | times: 7 | plus: 1 %}
          {% assign prev_monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
          {% if forloop.index == 1 %}
-            <th> Jan </th>
+            <th> 1月 </th>
          {% elsif prev_monday_day_sn < Feb and monday_day_sn >= Feb %} 
-            <th> Feb </th>
+            <th> 2月 </th>
          {% elsif prev_monday_day_sn < Mar and monday_day_sn >= Mar %} 
-            <th> Mar </th>
+            <th> 3月 </th>
          {% elsif prev_monday_day_sn < Apr and monday_day_sn >= Apr %} 
-            <th> Apr </th>
+            <th> 4月 </th>
          {% elsif prev_monday_day_sn < May and monday_day_sn >= May %} 
-            <th> May </th>
+            <th> 5月 </th>
          {% elsif prev_monday_day_sn < Jun and monday_day_sn >= Jun %} 
-            <th> Jun </th>
+            <th> 6月 </th>
          {% elsif prev_monday_day_sn < Jul and monday_day_sn >= Jul %} 
-            <th> Jul </th>
+            <th> 7月 </th>
          {% elsif prev_monday_day_sn < Aug and monday_day_sn >= Aug %} 
-            <th> Aug </th>
+            <th> 8月 </th>
          {% elsif prev_monday_day_sn < Sep and monday_day_sn >= Sep %} 
-            <th> Sep </th>
+            <th> 9月 </th>
          {% elsif prev_monday_day_sn < Oct and monday_day_sn >= Oct %} 
-            <th> Oct </th>
+            <th> 10月 </th>
          {% elsif prev_monday_day_sn < Nov and monday_day_sn >= Nov %} 
-            <th> Nov </th>
+            <th> 11月 </th>
          {% elsif prev_monday_day_sn < Dec and monday_day_sn > Dec %} 
-            <th> Dec </th>
+            <th> 12月 </th>
          {% else %}
             <th> </th>
          {% endif %}
@@ -144,33 +144,33 @@ generate empty calendar
                {% if posted_day_sn == today_sn %}
                   {% if posted_year == year %}
                      {% assign activity = activity | plus: 1 %}
-                     {% assign today_date = post.date | date: "%b. %d, %Y" %}
+                     {% assign today_date = post.date | date: "%Y年%m月%d日" %}
                   {% endif %}
                {% endif %}
 
                {% if edited_day_sn == today_sn %}
                   {% if edited_year == year %}
                      {% assign activity = activity | plus: 1 %}
-                     {% assign today_date = post.edit | date: "%b. %d, %Y" %}
+                     {% assign today_date = post.edit | date: "%Y年%m月%d日" %}
                   {% endif %}
                {% endif %}
             {% endfor %}
                         
             {% if forloop.first %}
                {% if weekday == 1 %}
-                  <td> Mon </td>
+                  <td> 周一 </td>
                {% elsif weekday == 3 %}
-                  <td> Tue </td>
+                  <td> 周二 </td>
                {% elsif weekday == 5 %}
-                  <td> Fri </td>
+                  <td> 周五 </td>
                {% elsif weekday == 7 %}
-                  <td> Sun </td>
+                  <td> 周日 </td>
                {% else %}
                   <td>  </td>
                {% endif %}  
             {% elsif forloop.index0 == 1 %}
                {% if weekday >= first_day_dow %}
-                  <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}">{% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
+                  <td class="act_{{ activity }}" title="{{today_date}} 有 {{ activity }} 条动态">{% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
                {% else %}
                   <td class="not_this_year">  </td>
                {% endif %}
@@ -178,10 +178,10 @@ generate empty calendar
                {% if weekday > last_day_dow %}
                   <td class="not_this_year">  </td>
                {% else %}
-                  <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}"> {% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
+                  <td class="act_{{ activity }}" title="{{today_date}} 有 {{ activity }} 条动态"> {% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
                {% endif %}      
             {% else %}
-               <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}"> {% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
+               <td class="act_{{ activity }}" title="{{today_date}} 有 {{ activity }} 条动态"> {% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
             {% endif %}
          {% endfor %}
          </tr>

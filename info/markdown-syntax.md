@@ -1,6 +1,6 @@
 ---
 layout: info
-title: Markdown Syntax
+title: Markdown 语法
 edit: 2024-02-05
 mathjax: true
 mermaid: true
@@ -8,397 +8,397 @@ highlight: true
 ---
 
 `# Markdown 语法基础
-`GitHub 使用 [kramdown](https://kramdown.gettalong.org/syntax.html) as GitHub Flavored Markdown (GFM). Some of the syntax are listed below.
+`GitHub 使用 [kramdown](https://kramdown.gettalong.org/syntax.html) 作为 GitHub Flavored Markdown (GFM)。以下列出了部分语法。
 
-## Typesetting
+## 排版
 
 ```md
-*This is italic.* **This is Bold**. * If asterisk is surrounded by spaces, it is not parsed. *
+*这是斜体。* **这是粗体**。 * 如果星号两侧被空格包围，则不会被解析。 *
 
-_This is also italic._ __This is also Bold__. _ If underscore is surrounded by spaces, it is not parsed. _
+_这也是斜体。_ __这也是粗体__。 _ 如果下划线两侧被空格包围，则不会被解析。 _
 
-[This is an external link](https://bit.ly). `"https://"` is important. [This is an internal link](#typesetting). Internal links are all lowercase with space replaced by hyphens "-". 
+[这是一个外部链接](https://bit.ly)。`"https://"` 很重要。[这是一个内部链接](#排版)。内部链接全部小写，空格用连字符 "-" 替换。
 
-You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[this](https://bit.ly)**, but not like `[this](https://bit.ly)`.
+你可以混合使用，比如 [*这样*](https://bit.ly)、[`这样`](https://bit.ly)、**[这样](https://bit.ly)**，但不能像 `[这样](https://bit.ly)` 这样。
 
-==Highlighting is not supported by GFM, but I implemented on this theme.==
+==高亮不被 GFM 支持，但我在这个主题中实现了它。==
 
 ```
 
-*This is italic.* **This is Bold**. * If asterisk is surrounded by spaces, it is not parsed. *
+*这是斜体。* **这是粗体**。 * 如果星号两侧被空格包围，则不会被解析。 *
 
-_This is also italic._ __This is also Bold__. _ If underscore is surrounded by spaces, it is not parsed. _
+_这也是斜体。_ __这也是粗体__。 _ 如果下划线两侧被空格包围，则不会被解析。 _
 
-[This is an external link](https://bit.ly). `"https://"` is important. [This is an internal link](#typesetting). Internal links are all lowercase with space replaced by hyphens "-". 
+[这是一个外部链接](https://bit.ly)。`"https://"` 很重要。[这是一个内部链接](#排版)。内部链接全部小写，空格用连字符 "-" 替换。
 
-You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[this](https://bit.ly)**, but not like `[this](https://bit.ly)`.
+你可以混合使用，比如 [*这样*](https://bit.ly)、[`这样`](https://bit.ly)、**[这样](https://bit.ly)**，但不能像 `[这样](https://bit.ly)` 这样。
 
-==Highlighting is not supported by GFM, but I implemented on this theme.==
+==高亮不被 GFM 支持，但我在这个主题中实现了它。==
 
-## Lists
+## 列表
 
 ```markdown
-- This is unordered list
-  - sub item
-    - subsub item
-      - subsubsub item
-        - it goes on and on ...
-- List can have multiple lines
+- 这是无序列表
+  - 子项
+    - 子子项
+      - 子子子项
+        - 可以一直延续下去 ...
+- 列表可以有多行
 
-  like this.
-- > Or block quotes
+  就像这样。
+- > 或者引用块
 - ```markdown
-  or code fences
+  或者代码块
 ​```
 
 ---
 
-1. This is ordered list
-   1. sub item
-2. This is as well
-3. It can keep going
+1. 这是有序列表
+   1. 子项
+2. 这个也是
+3. 可以一直延续
 
 ---
 
-1. You can avoid manuel numbering like this
-   1. sub item
-1. It keeps going
-1. yedda yedda
+1. 你可以像这样避免手动编号
+   1. 子项
+1. 它会自动延续
+1. 等等等等
 ```
 
-- This is unordered list
-  - sub item
-    - subsub item
-      - subsubsub item
-        - it goes on and on ...
-- List can have multiple lines
+- 这是无序列表
+  - 子项
+    - 子子项
+      - 子子子项
+        - 可以一直延续下去 ...
+- 列表可以有多行
 
-  like this.
-- > Or block quotes
+  就像这样。
+- > 或者引用块
 - ```markdown
-  or code fences
+  或者代码块
   ```
 
 ---
 
-1. This is ordered list
-   1. sub item
-2. This is as well
-3. It can keep going
+1. 这是有序列表
+   1. 子项
+2. 这个也是
+3. 可以一直延续
 
 ---
 
-1. You can avoid manuel numbering like this
+1. 你可以像这样避免手动编号
 
-   1. sub item
+   1. 子项
 
-1. It keeps going
+1. 它会自动延续
 
-1. yedda yedda
+1. 等等等等
 
-## Images
+## 图片
 
 ```markdown
-Markdown uses `![caption](link)` to reference pictures, caption is optional. You cannot control the size. 
+Markdown 使用 `![caption](link)` 来引用图片，题注是可选的。你无法控制图片大小。
 
 ![caption](https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
 
-So I prefer using HTML tags like this:
+所以我更喜欢像这样使用 HTML 标签：
 
 <img src="https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
 ```
 
-Markdown uses `![caption](link)` to reference pictures, caption is optional. You cannot control the size. 
+Markdown 使用 `![caption](link)` 来引用图片，题注是可选的。你无法控制图片大小。
 
 ![caption](https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
 
-So I prefer using HTML tags like this:
+所以我更喜欢像这样使用 HTML 标签：
 
 <img src="https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
 
-> Note: I consulted GitHub support about using `raw.github` link for pictures, they said it's okay to do so:
+> 注意：我曾就使用 `raw.github` 链接显示图片的事咨询过 GitHub 支持，他们说这样做没问题：
 >
-> > **Can I use raw links to show my pictures in my blog?**
+> > **我可以在博客中使用 raw 链接来显示图片吗？**
 > >
-> > I know this is not how the Jekyll recommended. Still I am wondering if this practice is discouraged from you guy for if my site got more popular and the traffic would be greater. I would like to know is there any traffic limit on the raw links and is there any work arounds that I could keep my directory structure?
+> > 我知道这不是 Jekyll 推荐的做法。但我仍然想知道，如果我的网站变得更受欢迎、流量变得更大，你们是否不鼓励这种做法。我想知道 raw 链接是否有流量限制，以及是否有办法保留我的目录结构？
 >
-> and they said:
+> 他们回复说：
 >
-> > Hi Yingkai,
+> > 你好，Yingkai，
 > >
-> > Thanks for reaching out.
+> > 感谢你的来信。
 > >
-> > We don't endorse this kind of structure typically, but it doesn't seem to be causing any problems on our end.
+> > 我们通常不推荐这种结构，但它似乎没有在我们这边造成任何问题。
 > >
-> > Also, there isn't any documented traffic limit on raw links nor are we aware of any workarounds (though it's possible they exist).
+> > 另外，raw 链接没有已记录的流量限制，我们也不清楚有什么变通方案（虽然可能存在）。
 > >
-> > We'll be sure to reach out if the traffic is causing undue load on our systems, but we're open to answering any other questions you may have about this. Cheers!
+> > 如果流量对我们的系统造成过大负载，我们一定会联系你。若你对此还有其他问题，我们随时乐意解答。祝好！
 > >
-> > All the best,
-> > GitHub Staff
+> > 一切顺利，
+> > GitHub 支持团队
 
-## Blocks: Blockquotes, Code fences
+## 块级元素：引用、代码块
 
 ```markdown
-> This is a quote block
+> 这是一个引用块
 >
-> > This is a quote block in side another
+> > 这是嵌套在另一个引用块中的引用块
 
 ​```python
-# This is a python code fence
+# 这是一个 Python 代码块
 import numpy as np
-print("""This is a python code fence""")
+print("""这是一个 Python 代码块""")
 ​```
 
 ​```fortran
-! This is a fortran code fence
+! 这是一个 Fortran 代码块
 implicit none
 ​```
 
 ​```
-This is a simple code fence. You can use it to display text in Mono fonts.
+这是一个简单代码块。你可以用它以等宽字体显示文本。
 ​```
 
-You can mix them as well, like 
+你也可以混合使用，比如
 
 >```
->this.
+>这样。
 >```
 ```
 
-> This is a quote block
+> 这是一个引用块
 >
-> > This is a quote block in side another
+> > 这是嵌套在另一个引用块中的引用块
 
 ```python
-# This is a python code fence
+# 这是一个 Python 代码块
 import numpy as np
-print("""This is a python code fence""")
+print("""这是一个 Python 代码块""")
 ```
 
 ```fortran
-! This is a fortran code fence
+! 这是一个 Fortran 代码块
 implicit none
 ```
 
 ```
-This is a simple code fence. You can use it to display text in Mono fonts.
+这是一个简单代码块。你可以用它以等宽字体显示文本。
 ```
 
 也可以混合使用，比如
 >```
->this.
+>这样。
 >```
 
-## Tables
+## 表格
 
 ```markdown
-| This column is left aligned | This column is centered | This column is right aligned |
+| 此列左对齐 | 此列居中对齐 | 此列右对齐 |
 | :-------------------------- | :---------------------: | ---------------------------: |
 | 1                           |            4            |                            7 |
 | 2                           |            5            |                            8 |
 | 3                           |            6            |                            9 |
 
-| You can use `![caption](link)` in tables.                    | You can use Math in tables. | You can use `<img src="" width="">` in tables.               |
+| 表格中可以使用 `![caption](link)`。                    | 表格中可以使用数学公式。 | 表格中可以使用 `<img src="" width="">`。               |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
 | ![caption](https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
 ```
 
-| This column is left aligned | This column is centered | This column is right aligned |
+| 此列左对齐 | 此列居中对齐 | 此列右对齐 |
 | :-------------------------- | :---------------------: | ---------------------------: |
 | 1                           |            4            |                            7 |
 | 2                           |            5            |                            8 |
 | 3                           |            6            |                            9 |
 
-| You can use `![caption](link)` in tables.                    | You can use Math in tables. | You can use `<img src="" width="">` in tables.               |
+| 表格中可以使用 `![caption](link)`。                    | 表格中可以使用数学公式。 | 表格中可以使用 `<img src="" width="">`。               |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
 | ![caption](https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/EloitHao/EloitHao.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
 
-## Mathjax
+## Mathjax 数学公式
 
 ```markdown
-This is inline math $\sum_{i=1}^{N} i $. This is display math.
+这是行内公式 $\sum_{i=1}^{N} i $。这是独立公式。
 
 $$
 \sum_{i=1}^{N} i 
 $$
 
-[Mathjax](http://docs.mathjax.org/en/latest/tex.html) syntax is like latex. You cannot use `\usepackge`, but you can use `\newcommand` like this 
+[Mathjax](http://docs.mathjax.org/en/latest/tex.html) 语法类似 latex。你不能使用 `\usepackge`，但可以像这样使用 `\newcommand`
 
 $$
 \newcommand{\NewOp}[2]{\lbrace{#1}\mid \otimes{#2}\rbrace}
 $$
 
-And `\NewOp` will be available in all later math blocks, whether inline $\NewOp{x}{y}$ or display
+之后 `\NewOp` 将在后续所有公式块中可用，无论是行内 $\NewOp{x}{y}$ 还是独立公式
 
 $$
 \NewOp{x}{y}
 $$
 
-Be **very careful** with the vertical bar symbol and underscore in math. If you use it like $|x|\ge 0$, $|0|=0$, or like $\lbrace x | x\gt 0\rbrace$, you will get a bunch of gibberish.
+在公式中要**格外小心**竖线符号和下划线。如果像 $|x|\ge 0$、$|0|=0$ 或 $\lbrace x | x\gt 0\rbrace$ 这样使用，会得到一堆乱码。
 
-Use `\vert` in $\vert x\vert\ge 0$, $\vert 0\vert=0$. Use `\mid` in $\lbrace x \mid x\gt 0​$ instead.
+在 $\vert x\vert\ge 0$、$\vert 0\vert=0$ 中使用 `\vert`。在 $\lbrace x \mid x\gt 0$ 中改用 `\mid`。
 
-Also using underscores like this $x_1$, $x_2$, $x_{c_2}^{c_3}$, with $y_{c_2}^{c_3}​$, will be processed as _this_.
+另外，像这样使用下划线 $x_1$、$x_2$、$x_{c_2}^{c_3}$，以及 $y_{c_2}^{c_3}$，会被处理成 _这样_。
 
-Wrap underscores with whitespaces like this $x _ 1$, $x _ 2$, $x _ {c _ 2}^{c _ 3}$, with $y _ {c _ 2}^{c _ 3 }​$.
+像这样用空格包裹下划线 $x _ 1$、$x _ 2$、$x _ {c _ 2}^{c _ 3}$，以及 $y _ {c _ 2}^{c _ 3 }$。$.
 ```
 
-This is inline math $\sum_{i=1}^{N} i $. This is display math.
+这是行内公式 $\sum_{i=1}^{N} i $。这是独立公式。
 
 $$
 \sum_{i=1}^{N} i 
 $$
 
-The extra empty line matters, or you will end up with
+多余的空行很重要，否则你会得到
 $$
 \sum_{i=1}^{N} i
 $$
 
-[Mathjax](http://docs.mathjax.org/en/latest/tex.html) syntax is like latex. You cannot use `\usepackge`, but you can use `\newcommand` like this 
+[Mathjax](http://docs.mathjax.org/en/latest/tex.html) 语法类似 latex。你不能使用 `\usepackge`，但可以像这样使用 `\newcommand`
 
 $$
 \newcommand{\NewOp}[2]{\lbrace{#1}\mid \otimes{#2}\rbrace}
 $$
 
-And `\NewOp` will be available in all later math blocks, whether inline $\NewOp{x}{y}​$ or display
+之后 `\NewOp` 将在后续所有公式块中可用，无论是行内 $\NewOp{x}{y}$ 还是独立公式
 
 $$
 \NewOp{x}{y}
 $$
 
 
-## Mermaid diagram
+## Mermaid 图表
 
- Not supported by GFM, implemented using JavaScript.
+ GFM 不支持，使用 JavaScript 实现。
 
 ```
 ​```mermaid
   graph LR;
     
-  A[Hello!] --> B{This}
-  B --> C(is a)
-  C --> D((Flowchart!))
+  A[你好！] --> B{这是}
+  B --> C(一个)
+  C --> D((流程图！))
 ​```
 ```
 
 ```mermaid
   graph LR;
-   A[Hello!] --> B{This}
-  B --> C(is a)
-  C --> D((Flowchart!))
+   A[你好！] --> B{这是}
+  B --> C(一个)
+  C --> D((流程图！))
 ```
 
-## Headings
+## 标题
 
 ```
-# Heading 1
+# 一级标题
 
-## Heading 2
+## 二级标题
 
-### Heading 3
+### 三级标题
 
-#### Heading 4
+#### 四级标题
 
-##### Heading 5
+##### 五级标题
 
-###### Heading 6
+###### 六级标题
 ```
 
-# Heading 1
+# 一级标题
 
-## Heading 2
+## 二级标题
 
-### Heading 3
+### 三级标题
 
-#### Heading 4
+#### 四级标题
 
-##### Heading 5
+##### 五级标题
 
-###### Heading 6
+###### 六级标题
 
-# Kind Reminders for Bloggers
+# 给博主的温馨提示
 
-## Mathjax Pitfalls
+## Mathjax 注意事项
 
 1. {% raw %}
 
-   do not use `{{` anywhere in your math. Say `\bra{{-2}^\psi}` use `{ {` instead. Jekyll will parse that as liquid tags. You can do that by replacing. 
+   不要在公式中的任何地方使用 `{{`。比如 `\bra{{-2}^\psi}` 应改用 `{ {`。Jekyll 会将其解析为 liquid 标签。可以通过替换来完成。
 
    {% endraw %}
 
-2. do not use `x_1` in inline math, write that as `x _ 1`. Jekyll will parse that as italic fonts. You can do that by replacing, but be careful that some of the links contains `_` so make sure you correct those links afterwards.
+2. 不要在行内公式中使用 `x_1`，应写成 `x _ 1`。Jekyll 会将其解析为斜体。可以通过替换来完成，但要注意有些链接包含 `_`，替换后请确保修正这些链接。
 
 ```
-   Using underscores like this $x_1$, $x_2$, $x_{c_2}^{c_3}$, with $y_{c_2}^{c_3}$, will be processed as _italic_.
+   像这样使用下划线 $x_1$、$x_2$、$x_{c_2}^{c_3}$，以及 $y_{c_2}^{c_3}$，会被处理成 _斜体_。
 
-   Wrap underscores with whitespaces like this $x _ 1$, $x _ 2$, $x _ {c _ 2}^{c _ 3}$, with $y _ {c _ 2}^{c _ 3 }$.
+   像这样用空格包裹下划线 $x _ 1$、$x _ 2$、$x _ {c _ 2}^{c _ 3}$，以及 $y _ {c _ 2}^{c _ 3 }$。
 ```
 
-   Using underscores like this $x_1$, $x_2$, $x_{c_2}^{c_3}$, with $y_{c_2}^{c_3}$, will be processed as _italic_.
+   像这样使用下划线 $x_1$、$x_2$、$x_{c_2}^{c_3}$，以及 $y_{c_2}^{c_3}$，会被处理成 _斜体_。
 
-   Wrap underscores with whitespaces like this $x _ 1$, $x _ 2$, $x _ {c _ 2}^{c _ 3}$, with $y _ {c _ 2}^{c _ 3 }​$.
+   像这样用空格包裹下划线 $x _ 1$、$x _ 2$、$x _ {c _ 2}^{c _ 3}$，以及 $y _ {c _ 2}^{c _ 3 }$。$.
 
 3. ```
-   Be **very careful** with the vertical bar symbol and underscore in math. If you use it like $|x|\ge 0$, $|0|=0$, or like $\lbrace x | x\gt 0\rbrace$, you will get a bunch of gibberish.
+   在公式中要**格外小心**竖线符号和下划线。如果像 $|x|\ge 0$、$|0|=0$ 或 $\lbrace x | x\gt 0\rbrace$ 这样使用，会得到一堆乱码。
    
-   Use `\vert` in $\vert x\vert\ge 0$, $\vert 0\vert=0$. Use `\mid` in $\lbrace x \mid x\gt 0​$ instead.
+   在 $\vert x\vert\ge 0$、$\vert 0\vert=0$ 中使用 `\vert`。在 $\lbrace x \mid x\gt 0$ 中改用 `\mid`。
    ```
 
-   Be **very careful** with the vertical bar symbol and underscore in math. If you use it like $|x|\ge 0$, $|0|=0$, or like $\lbrace x | x\gt 0\rbrace​$, you will get a bunch of gibberish.
+   在公式中要**格外小心**竖线符号和下划线。如果像 $|x|\ge 0$、$|0|=0$ 或 $\lbrace x | x\gt 0\rbrace$ 这样使用，会得到一堆乱码。
 
-   Use `\vert` in $\vert x\vert\ge 0$, $\vert 0\vert=0$. Use `\mid` in $\lbrace x \mid x\gt 0\rbrace$ instead.
+   在 $\vert x\vert\ge 0$、$\vert 0\vert=0$ 中使用 `\vert`。在 $\lbrace x \mid x\gt 0$ 中改用 `\mid`。
 
-4. Use `\newline` instead of `\\` in inline math. `\substack` is a very useful command.
+4. 在行内公式中使用 `\newline` 代替 `\\`。`\substack` 是一个非常有用的命令。
 
 5. ```markdown
-   The extra empty line of displaymath matters, or you will end up with
+   独立公式多余的空行很重要，否则你会得到
    $$
    \sum_{i=1}^{N} i
    $$
    ```
 
-   The extra empty line matters, or you will end up with
+   多余的空行很重要，否则你会得到
    $$
    \sum_{i=1}^{N} i
    $$
 
-## YAML front matter pitfalls
+## YAML 前置元数据注意事项
 
-Don't use `[ ]` in YAML front matter. 
+不要在 YAML 前置元数据中使用 `[ ]`。
 
-Don't use `:` in YAML front matter. If you have to, use pipe line:
+不要在 YAML 前置元数据中使用 `:`。如果必须使用，请用竖线语法：
 
 ```
 title: >
-   The Matrix II: Reload
+   黑客帝国 2：重装上阵
 ```
 
-## Typora related
+## Typora 相关
 
-`<img src="" width=80%>` will be rendered by typora but Jekyll only renders `<img src="" width="80%">`
+`<img src="" width=80%>` 可以被 typora 渲染，但 Jekyll 只渲染 `<img src="" width="80%">`
 
 
-## Foot Notes
+## 脚注
 
-This is a note[^1]. Footnotes can have captions like[^this]. You can reference to the same note multiple times like[^this]. Foot notes can have many other options like[^this-one]. Or just like [^that]. This is a [reference style link][linkid] to a page. And [this][linkid] is also a link. As is [this][] and [that].
+这是一个脚注[^1]。脚注可以带有题注，比如[^this]。你可以多次引用同一个脚注，比如[^this]。脚注还有很多其他选项，比如[^this-one]。或者就像 [^that] 这样。这是一个指向页面的[引用式链接][linkid]。[这个][linkid] 也是一个链接。[这个][] 和 [那个] 也是。
 
-# Foot Notes
+# 脚注
 
-The Foot notes are like this
+脚注就像这样
 
 
 [^1]: https://EloitHao.github.io
 [^this]: https://EloitHao.github.io
 
 [^this-one]: 
-    > Blockquotes can be in a footnote.
+    > 引用块可以放在脚注中。
 
 ```
-    as well as code blocks
+    代码块也可以
 ```
 
-[^that]: or, naturally, simple paragraphs.
+[^that]: 或者，当然，也可以是简单的段落。
 
-[^linkid]: https://EloitHao.github.io "Optional Title"
+[^linkid]: https://EloitHao.github.io "可选标题"
 

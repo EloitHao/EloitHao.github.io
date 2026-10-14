@@ -1,5 +1,5 @@
 ---
-title: Build Your Blog with GitHub Pages
+title: 用 GitHub Pages 搭建你的博客
 tags: Jekyll
 edit: 2019-03-26
 categories: Jekyll
@@ -7,7 +7,8 @@ status: Paused
 mathjax: true
 highlight: true
 mermaid: true
-描述：用 GitHub Pages 构建你的博客。这是如何使用我的主题 "PointingToTheMoon"来撰写博客的草图。这个主题非常适合学术用途，因为它具有支持数学jax的简单帖子页面和带toc的侧边栏。而主页面则有些花哨。---
+description: 用 GitHub Pages 构建你的博客。这是如何使用我的主题 "PointingToTheMoon" 来撰写博客的草图。这个主题非常适合学术用途，因为它具有支持 MathJax 的简洁文章页面和带目录的侧边栏。而主页面则有些花哨。
+---
 
 # 我能提供什么
 
@@ -19,72 +20,72 @@ mermaid: true
    1. 我需要 mathjax。其他主题似乎很少支持它。
    2. [mermaid diagram](https://mermaidjs.github.io/) 总是一件好事。 
    3. ==highlight==. 该功能必须由 js 实现。
-4. I don't want to build my blog locally and push the entire website to GitHub. After I have done styling, I write in markdown (using typora) and push it, that should be **all** it needed. 
-5. I want my assets in the same folder as my posts. I use the workaround as direct link it to the `raw.github` page, like this `<img src="https://raw.githubusercontent.com/EloitHao/PointingToTheMoon/master/_posts/2018-12-11-Jekyll-Build/assets/GitHub-desktop.png" width="80%">`. I consulted GitHub, and they said it's okay to do so.
-6. I want cool things, such as visitor map, tag clouds, and category clouds, commenting. I want Chinese readers to be able to comment as well. Disqus is blocked, and other sources are poorly maintained. So I chose commentit. All you need is a GitHub account or Facebook or Twitter.
-7. I have ZERO experience with front end stuff. The JavaScript is exhausting, so I avoided using JS as much as possible. It turns out a hidden sidebar can be down in pure CSS.
+4. 我不想在本地构建博客再把整个网站推送到 GitHub。完成样式设计之后，我只需用 markdown（使用 typora）写作并推送，这就应该是所需的**全部**操作。
+5. 我希望资源文件和文章放在同一个文件夹里。我的变通办法是直接链接到 `raw.github` 页面，像这样 `<img src="https://raw.githubusercontent.com/EloitHao/PointingToTheMoon/master/_posts/2018-12-11-Jekyll-Build/assets/GitHub-desktop.png" width="80%">`。我咨询过 GitHub，他们说这样做没问题。
+6. 我想要一些酷炫的东西，比如访客地图、标签云、分类云和评论功能。我希望中文读者也能评论。Disqus 被墙了，其他评论服务又维护不善，所以我选择了 commentit。你只需要一个 GitHub、Facebook 或 Twitter 账号。
+7. 我对前端**零**经验。JavaScript 太累人了，所以我尽量避免使用 JS。事实证明，隐藏侧边栏完全可以用纯 CSS 实现。
 
-Now I ended up with this theme. I know it's not perfect, but I will settle it for now. I will consider any suggestions you guys make, you can comment it in this page.
+最终我做出了这个主题。我知道它并不完美，但目前就先用它了。你们提出的任何建议我都会考虑，可以直接在本页评论。
 
-About the extended markdown syntaxes, you can see it [here]().
+关于扩展的 markdown 语法，可以看[这里]()。
 
-# Why GitHub Pages?
+# 为什么选择 GitHub Pages？
 
-1. It's simple.
+1. 它很简单。
 
-   1. The Domain is just `username.github.io`. You don't need to buy your own domain. PS, All domains must be registered by the owner using a personal ID. So that saves you a ton of trouble. But GitHub pages also allows you to 
-   2. GitHub pages build the website for you. This means you don't need to install `Jekyll` or `ruby`; you don't need you locally build your website and publish it. You simply commit your source code and that's all. 
-   3. After properly configured, you can write in `markdown`, and `push` (a fancy name for upload) to GitHub.  Things like equations, lists, tables, mermaid-diagrams, images, or videos are automated supported. This means all you'll need is a text editor as simple as good old notepad.exe to write your post, yet I strongly recommend [`typora`](https://www.typora.io/). As the time of writing, it is free.
+   1. 域名就是 `username.github.io`，你不需要购买自己的域名。另外，所有域名都必须由所有者用个人身份证件注册，所以这帮你省去了一大堆麻烦。当然 GitHub Pages 也允许你绑定自己的域名。
+   2. GitHub Pages 会替你构建网站。这意味着你不需要安装 `Jekyll` 或 `ruby`，也不需要在本地构建网站再发布。你只需提交源代码，就这样。
+   3. 正确配置之后，你就可以用 `markdown` 写作并 `push`（上传的花哨说法）到 GitHub。公式、列表、表格、mermaid 图表、图片、视频之类的东西都会自动支持。这意味着你只需要一个像老牌记事本 notepad.exe 那样简单的文本编辑器就能写文章，不过我强烈推荐 [`typora`](https://www.typora.io/)。截至写作时，它是免费的。
 
-2. You have absolute control over anything.
+2. 你对一切拥有绝对的控制权。
 
-   1. The look. WordPress, blogspace, as well as other services,  do provide beautiful templates. But some of them have unnecessary constraints of where to put what. While on GitHub, you get to control what your pages look like. Still, there are thousands of readily-made themes at your disposal if you are lazy. With a few modifications, you can tailor your website the way you want.
-   2. Functions. RSS feed, search, table of contents, pagination, visitor analysis, commenting, *etc*. Anything you can think of it out there. GitHub is a static site generator, which means there are no server-side calculations. However, you can always trick the users with a few walkarounds and CDNs.
+   1. 外观。WordPress、blogspace 以及其他服务确实提供了漂亮的模板，但其中一些对"什么东西放在哪里"有着不必要的限制。而在 GitHub 上，你可以完全控制页面的样子。当然，如果你懒得折腾，还有成千上万的现成主题可供使用。稍加修改，你就能把网站打造成你想要的样子。
+   2. 功能。RSS 订阅、搜索、目录、分页、访客分析、评论等*等*。你能想到的都实现了。GitHub Pages 是静态站点，这意味着没有服务器端计算。不过，你总可以通过一些变通方法和 CDN 来"糊弄"过去。
 
-3. There is a nice touch. GitHub's famous for being used by techies.
+3. 还有一点小乐趣。GitHub 以被技术人使用而闻名。
 
-   Having your own website built entirely by yourself.
+   拥有一个完全由自己搭建的网站。
 
-4. Limitations
+4. 限制
 
-   GitHub Pages source repositories have a recommended limit of 1GB. Published GitHub Pages sites may be no larger than 1 GB. GitHub Pages sites have a soft bandwidth limit of 100GB per month.    GitHub Pages sites have a soft limit of 10 builds per hour. See [here](https://help.github.com/articles/what-is-github-pages/#usage-limits)
+   GitHub Pages 源仓库的建议上限为 1GB。已发布的 GitHub Pages 站点不得超过 1 GB。GitHub Pages 站点每月有 100GB 的软性带宽限制，每小时有 10 次构建的软性限制。参见[这里](https://help.github.com/articles/what-is-github-pages/#usage-limits)。
 
-# About Git
+# 关于 Git
 
-I am going to assume that you know the basic operations of git. If not, download the [GitHub Desktop](https://desktop.github.com/), and do everything in GUI. For the majority of bloggers, only commit and push is required. For you to publish your work, save your file in your editor, go to GitHub Desktop, commit your changes, and push.
+我假设你已经了解 git 的基本操作。如果没有，请下载 [GitHub Desktop](https://desktop.github.com/)，在图形界面里完成所有操作。对大多数博主来说，只需要 commit 和 push 就够了。要发布你的作品，只需在编辑器中保存文件，打开 GitHub Desktop，提交更改并推送即可。
 
-<img src="https://raw.githubusercontent.com/EloitHao/PointingToTheMoon/master/_posts/2018-12-11-Jekyll-Build/assets/GitHub-desktop.png" alt="GitHub desktop screen shot" width="60%">
+<img src="https://raw.githubusercontent.com/EloitHao/PointingToTheMoon/master/_posts/2018-12-11-Jekyll-Build/assets/GitHub-desktop.png" alt="GitHub desktop 截图" width="60%">
 
-# Clone The Repo
+# 克隆仓库
 
-Clone this [repo](https://github.com/EloitHao/PointingToTheMoon) and publish it!
+克隆这个[仓库](https://github.com/EloitHao/PointingToTheMoon)并开始发布吧！
 
-# What Should I Modify
+# 我需要修改什么
 
-Here is a list of files you need to modify
+以下是你需要修改的文件列表
 
-1. **FIRST: If you are using the "EloitHao.github.io" repo, REMOVE ALL INFO ABOUT EloitHao.** If you are using "/PointingToTheMoon" repo, you can ignore this step. Including personal description in `/index.html`, `/google8e731c6ab620fd34`, `/about/index.md` and my CV at `/about/CV-of-Liu-Yingkai.pdf`.
+1. **首先：如果你使用的是 "EloitHao.github.io" 仓库，请删除所有关于 EloitHao 的信息。** 如果你使用的是 "/PointingToTheMoon" 仓库，可以忽略这一步。包括 `/index.html` 中的个人描述、`/google8e731c6ab620fd34`、`/about/index.md` 以及我的简历 `/about/CV-of-Liu-Yingkai.pdf`。
 
-2. License.md: add your version of license at the beginning of the file.
+2. License.md：在文件开头添加你的许可证版本。
 
-3. Readme.md: add your description.
+3. Readme.md：添加你的描述。
 
-4. config.yml: fill in as much as you can. Also see step 7.
+4. config.yml：尽可能填写完整。另见第 7 步。
 
-5. index.html: fill in the description and (if any) proposed posts.
+5. index.html：填写描述以及（如果有的话）预计要写的文章。
 
-6. register at [commentit.io](https://commentit.io/). This enables your website's comment feature.
+6. 在 [commentit.io](https://commentit.io/) 注册。这会启用你网站的评论功能。
 
-7. register at [clustermap.com](clustermap.com). Choose your widget as "Map widget", and you will see something like
+7. 在 [clustermap.com](clustermap.com) 注册。将小部件类型选择为 "Map widget"，你会看到类似这样的内容：
 
    ```html
    <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=MlqUzlcZFdHetSQtyml5oHyt9RwVjZrsGbvyaRpMwgU&cl=ffffff&w=a"></script>
    ```
 
-   copy the string from "d=" to "&cl=", namely "MlqUzlcZFdHetSQtyml5oHyt9RwVjZrsGbvyaRpMwgU" in this case to config.yml.
+   把从 "d=" 到 "&cl=" 之间的字符串（本例中即 "MlqUzlcZFdHetSQtyml5oHyt9RwVjZrsGbvyaRpMwgU"）复制到 config.yml 中。
 
-8. secret/index.html: decrypt the page use password `ykliu` and save the page locally. Choose your password, copy and paste the HTML into the input textbox, and download the page. Replace secret/index.html with the HTML file you downloaded. Now you have an encrypted page only you can use to encrypt your other pages!
+8. secret/index.html：用密码 `ykliu` 解密该页面并在本地保存。选择你自己的密码，把 HTML 复制粘贴到输入框中，然后下载页面。用下载的 HTML 文件替换 secret/index.html。现在你就有了一个加密页面，只有你能用它来加密其他页面！
 
-9. Better google discovery: Google site authentication. Just go to [webmaster](https://search.google.com/search-console?hl=en) and click `add property` and download the google authentication file, put in under the root of your repo. A few days later, you should be able to see your website in google search by searching `site:your-site-name.github.io` (no space in between).
+9. 更好的谷歌收录：Google 站点验证。只需前往[搜索控制台](https://search.google.com/search-console?hl=en)，点击 `add property`，下载谷歌验证文件并放到仓库根目录下。几天之后，你就可以在谷歌搜索中通过搜索 `site:your-site-name.github.io`（中间无空格）找到你的网站。
 
-After that, you should be able to enjoy your blogging!
+之后，你就可以尽情享受写博客的乐趣了！

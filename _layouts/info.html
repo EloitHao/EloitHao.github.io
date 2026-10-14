@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
    <head>
       {% include head.html %}  
       {% if page.mathjax %}			
@@ -43,7 +43,7 @@
                <div id="info">
                   <div id="date">
                      {% if page.edit %}
-                     <p><code>Edited</code>:  &nbsp; {{ page.edit | date: '%B %d, %Y' }} </p>
+                     <p><code>编辑于</code>:  &nbsp; {{ page.edit | date: '%Y年%m月%d日' }} </p>
                      {% endif %}
                   </div>
                </div>
