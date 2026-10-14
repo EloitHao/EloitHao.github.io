@@ -18,30 +18,24 @@
       </div>
       {% if site.tags != '' %}
       <div id="tag-list">
-         <p><code> 标签 </code>:  &nbsp; 
+         <p><code> 标签 </code>:  &nbsp;
             {% for tag in page.tags %}
             {% capture tag_name %}{{ tag }}{% endcapture %}
-            <code><a href="{{site.url}}{{site.baseurl}}/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
+            <code><a href="{{site.url}}{{site.baseurl}}/blog/tags#{{ tag_name | slugify }}">{{ tag_name }}</a></code>
             {% endfor %}
          </p>
       </div>
-      {% endif %}	
+      {% endif %}
       {% if site.categories != '' %}
       <div id="category-list">
          <p><code> 分类 </code>:  &nbsp;
             {% for category in page.categories %}
             {% capture category_name %}{{ category }}{% endcapture %}
-            <code><a href="{{site.url}}{{site.baseurl}}/blog/categories#{{ category_name }}" target="_blank">{{ category_name }}</a></code>
+            <code><a href="{{site.url}}{{site.baseurl}}/blog/categories#{{ category_name | slugify }}">{{ category_name }}</a></code>
             {% endfor %}
          </p>
       </div>
-      {% endif %}	
+      {% endif %}
    </div>
-   {% comment %}
-   <div id="info" >
-      <p><code>Fonts</code>: &nbsp; {% include fontAdj.html %}</p>
-   </div>
-   {% endcomment %}
-   <div class="hint" style="font-size: 0.7rem;line-height: 0.7rem;color: #A9A9A9;"> 若公式、图片或图表未能正确渲染，请刷新页面。若问题仍然存在，可以<a href="{{site.url}}{{site.baseurl}}/about/#contact" style="color: inherit">联系我</a>. </div>
    <hr>
 </div>

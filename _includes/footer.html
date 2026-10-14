@@ -1,11 +1,7 @@
 <footer>
-   <p style="margin-left: auto; margin-right: auto;"> 
-      &copy; {{ site.posts[-1].date | date: '%Y' }}-{{ site.time | date: '%Y' }}, {{ site.author.name }}. 本网站为开源项目。 {% if page.edit %}<a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/commits/master/{{ page.path }}" > 版本历史</a>.{% endif %} <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/edit/master/{{ page.path }}" target="_blank">改进此页面</a>. <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/blob/master/LICENSE.md" target="_blank">许可协议</a>. <a href="{{site.url}}{{site.baseurl}}/info/disclaimer" target="_blank">免责声明</a>. 
+   <p>
+      &copy; {{ site.posts[-1].date | date: '%Y' }}-{{ site.time | date: '%Y' }} {{ site.author.name }} · <a href="{{site.url}}{{site.baseurl}}/info/disclaimer">免责声明</a> · <a href="{{site.url}}{{site.baseurl}}/rss.xml">RSS 订阅</a>
    </p>
-	 {% if include.analytics == false %}
-	 {% else %}
-   {% include clastrmap.html style="hiddenpng"%}
-	 {% endif %}
 </footer>
 
 <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/footer.css" >

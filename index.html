@@ -1,31 +1,25 @@
 ---
 layout: home
 ---
-<div class="user-details">
-<h2> 人生如长河 </h2>
-<p style="text-align: justify;"> 你可以期待太阳从东方升起，而风却随心所欲地从四面八方吹来。 --萨特 </p>
-
-<div class="analytics"  style="border: solid lightgrey; border-radius: 5px;">
-          {% include clastrmap.html %}
+<div class="lower">
+   <div class="user-details">
+      <h2> 人生如长河 </h2>
+      <p> 你可以期待太阳从东方升起，而风却随心所欲地从四面八方吹来。 ——萨特 </p>
+   </div>
+   <div class="permlinks">
+      <h2>最新文章</h2>
+      <dl class="post-list">
+         {% for post in site.posts limit:3 %}
+         <dt>
+            <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+            {% include status-indicator.html status=post.status %}
+         </dt>
+         {% if post.description %}
+         <dd>{{ post.description | markdownify }}</dd>
+         {% endif %}
+         {% endfor %}
+      </dl>
+      <p class="all-posts"><a href="/blog">全部文章 →</a></p>
+   </div>
 </div>
-</div>
-<div class="permlinks">
-<h2>最新文章</h2>
-<dl>
-	{% for post in site.posts limit:3 %}
-	<dt><code>{{ post.date | date_to_string }} </code><i class="fas fa-angle-double-right" aria-hidden="true"></i><a href="{{ post.url }}">{{ post.title }}</a> &nbsp;{% include status-indicator.html status=post.status%}
-	{% if post.description %}
- <dd style="text-align: justify">{{ post.description | markdownify }}
-    </dd>
-	{% endif %}
-	{% endfor %}
-	<p>... <a href="/blog">全部文章</a> </p>
-</dl>
-
-<h2>即将发布的文章（请在 /index.html 中编辑）</h2>
-<ul>
-	<li>文章一</li>
-	<li>文章二</li>
-</ul>
-
-</div >

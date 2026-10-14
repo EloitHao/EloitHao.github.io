@@ -199,7 +199,7 @@ generate empty calendar
 <dl class="posts">
 	 {% for post in site.posts %}
 		<dt>
-    <code>{{ post.date | date_to_string }}</code> <i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;{% include status-indicator.html status=post.status%}
+    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span> <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>&nbsp;{% include status-indicator.html status=post.status%}
     </dt>
     {% if post.description %}
  <dd style="text-align: justify">{{ post.description  | markdownify }}

@@ -6,9 +6,6 @@
       {% include markdown-enhancements/mathjax.html %}
       {% endif %} 
       {% include theme-vue.html%}
-      <!-- change font -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet" async>
-      <!--  -->
    </head>
    {% include topnav.html active="home"%}
    <body>
@@ -23,7 +20,9 @@
             </div>
          </div>
       </div>
-      {% include footer.html %} 
+      {% include footer.html %}
+      {% include backtotop.html %}
+      <script src="{{site.url}}{{site.baseurl}}/assets/js/navJS.js" async></script>
    </body>
    {% if page.mermaid == true %}
    {% include markdown-enhancements/mermaid.html %}

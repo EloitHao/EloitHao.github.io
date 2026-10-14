@@ -4,14 +4,9 @@
       {% include head.html %}
       <!-- main style sheet -->
       <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/home.css">
-      <!-- font awesome -->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-      <!-- google font-->
-      <link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
-      <!-- -->
    </head>
    <body>
-      <div id="particles-js" style="background-image: url('https://EloitHao.github.io/about/Moon.png');background-size: 20%;background-repeat: no-repeat;background-position: 80% 20%;">
+      <div id="particles-js">
          <div class="header">
             <h1>
                <span class="site-title">{{site.title}}</span>
@@ -19,11 +14,12 @@
             </h1>
             <div class="header-links">
                <a class="link" href="/blog">文章</a>
-               <!-- <a class="link" href="/repo" >Codes</a> -->
                <a class="link" href="/about" >关于</a>
             </div>
          </div>
-         <a class="down" href="#about" data-scroll><i class="icon fas fa-chevron-down fa-lg" aria-hidden="true" style="z-index: 2;"></i></a>
+         <a class="down" href="#about" data-scroll aria-label="向下滚动">
+            <svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="z-index: 2;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+         </a>
       </div>
       <section id="about">
          <div class="lower">
